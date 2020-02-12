@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_imgname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:inputType="text"
+                android:textSize="24sp"
+                android:hint="@string/hnt_imgnew"/>
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_imgname"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:inputType="text"
+                android:textSize="12sp"
+                android:hint="@string/hnt_description"/>
+
+            <TextView
+                android:id="@+id/txt_selecttxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/et_description"
+                android:text="@string/selectTxt"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ivselectimg"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/txt_selecttxt"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/hnt_imgnew"
+                android:src="@drawable/camera_icon" />
+
+            <Button
+                android:id="@+id/btnadd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivselectimg"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="68dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="68dp"
+                android:layout_marginRight="68dp"
+                android:text="@string/btn_add"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/btnreturn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnadd"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="68dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="68dp"
+                android:layout_marginRight="68dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/btn_return"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+</ScrollView>

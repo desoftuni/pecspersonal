@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Mi pecs personal</string>
+    <string name="title_app">Mi pecs personal</string>
+    <string name="gallery_txt">Galeria</string>
+    <string name="manager_txt">Datos</string>
+    <string name="adventure_txt">Juegos</string>
+    <string name="settings_txt">Configuracion</string>
+    <string name="welcome_str">Elija una opcion</string>
+    <string name="img_gallery">opcion galeria</string>
+    <string name="btn_comenzar">ENTRAR</string>
+    <string name="ctn_imgsp1">logo app</string>
+    <string name="hnt_imgnew">Nombre de la imagen</string>
+    <string name="hnt_description">Escriba una frase usando el nombre</string>
+    <string name="btn_chooseimg">Elegir imagen</string>
+    <string name="btn_add">Guardar</string>
+    <string name="btn_return">Regresar a la lista</string>
+    <string name="str_carditem">TextView</string>
+    <string name="selectTxt">Presiona para seleccionar una imagen</string>
+    <string name="add_newimg">Agregar imagenes</string>
+    <string name="returnlist">Regresar</string>
+
+    <!-- Slide 1 titulo y descripcion -->
+    <string name="slide_1_title">¡Bienvenido a Mi pecs personal!</string>
+    <string name="slide_1_desc">Una aplicación inspirada en el Sistema de comunicación por Intercambio de Figuras PECS para ayudar al individuo con TEA en la comunicación y lenguaje</string>
+
+    <!-- Slide 2 titulo y descripcion -->
+    <string name="slide_2_title">Comunicación por imagenes</string>
+    <string name="slide_2_desc">Reutiliza imagenes para el aprendizaje o añade de tu galeria</string>
+
+    <!-- Slide 3 titulo y descripcion -->
+    <string name="slide_3_title">Configura para el usuario</string>
+    <string name="slide_3_desc">Mi interapec esta diseñada para configurarse de acuerdo a lo que necesites</string>
+
+    <!-- Slide 4 titulo y descripcion -->
+    <string name="slide_4_title">Manten el control</string>
+    <string name="slide_4_desc">La aplicacion dispone de un chequeo de seguridad para que el usuario no cambie accidentalmente tu configuración ¡Desactiva esta opción en cualquier momento!</string>
+
+    <!-- Slide 5 titulo y descripcion -->
+    <string name="slide_5_title">!Empecemos!</string>
+
+    <string name="example_name">Ej: luis, ana, etc...</string>
+</resources>
