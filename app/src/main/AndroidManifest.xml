@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".RecordListActivity" />
+        <activity android:name=".MenuActivity" />
         <activity android:name=".ItemActivity" />
         <activity
             android:name=".SplashActivity"
@@ -27,7 +28,6 @@
             android:theme="@style/BgSlide" />
         <activity android:name=".MainActivity" />
         <activity android:name=".AddActivity" />
-        <activity android:name=".Galeria" />
     </application>
 
 </manifest>

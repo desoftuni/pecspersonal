@@ -10,4 +10,6 @@
     <color name="inactive_dots">#777777</color>
     <color name="titleThumbnail">#0700FF</color>
     <color name="listColor">#CACACA</color>
+    <color name="gray">#F1F1F1</color>
+    <color name="white">#FFFFFF</color>
 </resources>

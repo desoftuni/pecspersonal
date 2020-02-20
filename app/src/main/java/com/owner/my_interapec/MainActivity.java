@@ -15,19 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private GridView gridView;
     ArrayList<CardItem> list;
     public static SQLiteHelper sqLiteHelper;
-    String[] values = {
-            "Galeria",
-            "Datos",
-            "Aventura",
-            "Configuracion"
-            };
-
-    int[] imagenes = {
-            R.drawable.camera_icon,
-            R.drawable.manager_icon,
-            R.drawable.canary_islands,
-            R.drawable.settings_icon
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,22 +27,14 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayShowCustomEnabled(true);
         View cView = getLayoutInflater().inflate(R.layout.custom_action_bar,null);
         actionBar.setCustomView(cView);
-//        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-//        getSupportActionBar().setDisplayShowCustomEnabled(true);
-//        getSupportActionBar().setCustomView(R.layout.custom_action_bar);
-//        View view = getSupportActionBar().getCustomView();
 
-//        gridView = (GridView)findViewById(R.id.grid_menu);
-//
-//        GridAdapter gridAdapter = new GridAdapter(this, values, imagenes);
-//        gridView.setAdapter(gridAdapter);
         sqLiteHelper = new SQLiteHelper(this,"myinterapec.sqlite", null, 1);
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS CARD(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, description VARCHAR, image BLOB)");
 
 
         gridView = (GridView)findViewById(R.id.grid_items);
         list = new ArrayList<>();
-        CardListAdapter adapter = new CardListAdapter(this,R.layout.card_items, list);
+        CardListAdapter adapter = new CardListAdapter(this,R.layout.list_item, list);
         gridView.setAdapter(adapter);
 
         Cursor cursor = sqLiteHelper.getData("SELECT * FROM CARD");
@@ -75,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(MainActivity.this,"Has clickeado en settings", Toast.LENGTH_SHORT).show();
             Intent addActivity = new Intent(MainActivity.this,MenuActivity.class);
             startActivity(addActivity);
-            finish();
         }
    }
 }

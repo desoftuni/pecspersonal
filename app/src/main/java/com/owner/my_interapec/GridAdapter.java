@@ -54,14 +54,14 @@ public class GridAdapter extends BaseAdapter {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    switch (position) {
+     /*               switch (position) {
                         case 0:
-                            Intent a = new Intent(v.getContext(), Galeria.class);
+          //                  Intent a = new Intent(v.getContext(), Galeria.class);
                             v.getContext().startActivity(a);
                             break;
                         default:
                             break;
-                    }
+                    }*/
                 }
             });
         }

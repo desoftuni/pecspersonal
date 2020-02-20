@@ -22,12 +22,11 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 public class AddActivity extends AppCompatActivity {
 
     private EditText et_nombre, et_descripcion;
-    private Button btnChoose, btnAdd, btnList;
+    private Button btnAdd, btnList;
     private ImageView imgvw;
     public static SQLiteHelper sqLiteHelper;
     final int REQUEST_CODE_GALLERY = 999;
@@ -59,6 +58,10 @@ public class AddActivity extends AppCompatActivity {
                 try {
                     String nombre = et_nombre.getText().toString().trim();
                     String descripcion = et_descripcion.getText().toString().trim();
+                    btnAdd.setEnabled(false);
+                    btnList.setEnabled(false);
+                    btnAdd.setClickable(false);
+                    btnList.setClickable(false);
                     if(nombre.isEmpty()) {
                         Toast.makeText( getApplicationContext(), "Por favor ingrese un nombre",Toast.LENGTH_SHORT).show();
                     } else if(descripcion.isEmpty()) {
@@ -76,6 +79,11 @@ public class AddActivity extends AppCompatActivity {
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
+                } finally {
+                    btnAdd.setEnabled(true);
+                    btnList.setEnabled(true);
+                    btnAdd.setClickable(true);
+                    btnList.setClickable(true);
                 }
             }
         });
@@ -83,7 +91,7 @@ public class AddActivity extends AppCompatActivity {
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent list = new Intent(getApplicationContext(),MainActivity.class);
+                Intent list = new Intent(AddActivity.this, RecordListActivity.class);
                 startActivity(list);
                 finish();
             }

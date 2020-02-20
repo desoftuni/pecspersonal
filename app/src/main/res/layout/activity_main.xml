@@ -4,20 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <GridView
         android:id="@+id/grid_items"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5pt"
+        android:horizontalSpacing="5pt"
+        android:columnWidth="64pt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:numColumns="auto_fit" />
-<!--    <GridView-->
-<!--        android:id="@+id/grid_menu"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:columnWidth="110dp"-->
-<!--        android:gravity="center"-->
-<!--        android:numColumns="auto_fit" />-->
+        android:layout_height="match_parent"/>
 </RelativeLayout>

@@ -7,7 +7,7 @@
     tools:context=".MenuActivity">
     <Button
         android:id="@+id/btn_topics"
-        android:layout_width="300dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:text="@string/add_newimg"
         android:textSize="28sp"
@@ -16,16 +16,15 @@
         android:background="@color/active_dots"
         android:onClick="toPictures"/>
     <Button
-        android:id="@+id/btn_rtn"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnconfig"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_topics"
-        android:text="@string/returnlist"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
+        android:text="@string/btn_cnfg"
         android:textSize="28sp"
         android:layout_centerInParent="true"
+        android:layout_marginTop="20sp"
         android:textColor="@color/letters"
         android:background="@color/active_dots"
-        android:onClick="toCardList"/>
+        android:onClick="toPictures"/>
 </RelativeLayout>

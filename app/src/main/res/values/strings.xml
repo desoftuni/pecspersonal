@@ -16,8 +16,9 @@
     <string name="btn_return">Regresar a la lista</string>
     <string name="str_carditem">TextView</string>
     <string name="selectTxt">Presiona para seleccionar una imagen</string>
-    <string name="add_newimg">Agregar imagenes</string>
-    <string name="returnlist">Regresar</string>
+    <string name="add_newimg">Administrar imagenes</string>
+    <string name="btn_cnfg">Configurar</string>
+    <string name="btnEdit">Actualizar</string>
 
     <!-- Slide 1 titulo y descripcion -->
     <string name="slide_1_title">¡Bienvenido a Mi pecs personal!</string>

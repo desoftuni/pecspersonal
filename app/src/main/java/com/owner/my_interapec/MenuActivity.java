@@ -6,30 +6,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button btnTopics, btnReturn;
+    private Button btnTopics, btnCnfg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
         btnTopics = (Button)findViewById(R.id.btn_topics);
-        btnReturn = (Button)findViewById(R.id.btn_rtn);
+        btnCnfg = (Button)findViewById(R.id.btnconfig);
+
+        btnCnfg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MenuActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     public void toPictures(View v) {
-        Intent pictures = new Intent(this,AddActivity.class);
+        Intent pictures = new Intent(this, RecordListActivity.class);
         startActivity(pictures);
         finish();
     }
-
-    public void toCardList(View v) {
-        Intent cardlist = new Intent(this,MainActivity.class);
-        startActivity(cardlist);
-        finish();
-    }
-
 }

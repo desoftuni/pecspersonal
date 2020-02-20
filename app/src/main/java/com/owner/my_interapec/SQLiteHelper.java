@@ -34,6 +34,33 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         statement.bindBlob(3, imagen);
 
         statement.executeInsert();
+        database.close();
+    }
+
+    public void updateData(String nombre, String descripcion, byte[] imagen, int id) {
+        SQLiteDatabase database = getWritableDatabase();
+        String updateQuery = "UPDATE CARD SET name=?, description=?, image=?, image=? WHERE Id=?";
+        SQLiteStatement statement = database.compileStatement(updateQuery);
+
+        statement.bindString(1, nombre);
+        statement.bindString(2, descripcion);
+        statement.bindBlob(3,imagen);
+        statement.bindDouble(4,(double)id);
+
+        statement.execute();
+        database.close();
+    }
+
+    public void deleteData(int id) {
+        SQLiteDatabase database = getWritableDatabase();
+        String deleteQuery = "DELETE FROM CARD WHERE Id=?";
+        SQLiteStatement statement = database.compileStatement(deleteQuery);
+
+        statement.clearBindings();
+        statement.bindDouble(1,(double)id);
+
+        statement.execute();
+        database.close();
     }
 
     public Cursor getData(String sql) {

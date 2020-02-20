@@ -55,8 +55,8 @@ public class CardListAdapter extends BaseAdapter {
             row = inflater.inflate(layout, null);
 
 
-            holder.txtnombre = (TextView)row.findViewById(R.id.tvnombre);
-            holder.imageView = (ImageView)row.findViewById(R.id.imgthumbnail);
+            holder.txtnombre = (TextView)row.findViewById(R.id.tv_itemname);
+            holder.imageView = (ImageView)row.findViewById(R.id.img_item);
             row.setTag(holder);
 
         } else {

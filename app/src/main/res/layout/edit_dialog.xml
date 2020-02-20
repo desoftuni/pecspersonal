@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imagevrec"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/active_dots"
+        android:contentDescription="@string/hnt_imgnew"
+        android:src="@drawable/camera_icon" />
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hnt_imgnew"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/edtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hnt_description"/>
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_topics"
+        android:text="@string/btnEdit"
+        android:textSize="18sp"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/letters"
+        android:background="@color/active_dots"
+        android:onClick="toPictures"/>
+
+</LinearLayout>
