@@ -2,11 +2,13 @@ package com.owner.my_interapec;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,7 +28,7 @@ import java.io.InputStream;
 public class AddActivity extends AppCompatActivity {
 
     private EditText et_nombre, et_descripcion;
-    private Button btnAdd, btnList;
+    private Button btnAdd;
     private ImageView imgvw;
     public static SQLiteHelper sqLiteHelper;
     final int REQUEST_CODE_GALLERY = 999;
@@ -35,6 +37,10 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Nuevo registro");
 
         init();
         sqLiteHelper = new SQLiteHelper(this, "myinterapec.sqlite",null,1);
@@ -59,9 +65,7 @@ public class AddActivity extends AppCompatActivity {
                     String nombre = et_nombre.getText().toString().trim();
                     String descripcion = et_descripcion.getText().toString().trim();
                     btnAdd.setEnabled(false);
-                    btnList.setEnabled(false);
                     btnAdd.setClickable(false);
-                    btnList.setClickable(false);
                     if(nombre.isEmpty()) {
                         Toast.makeText( getApplicationContext(), "Por favor ingrese un nombre",Toast.LENGTH_SHORT).show();
                     } else if(descripcion.isEmpty()) {
@@ -81,19 +85,8 @@ public class AddActivity extends AppCompatActivity {
                     e.printStackTrace();
                 } finally {
                     btnAdd.setEnabled(true);
-                    btnList.setEnabled(true);
                     btnAdd.setClickable(true);
-                    btnList.setClickable(true);
                 }
-            }
-        });
-
-        btnList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent list = new Intent(AddActivity.this, RecordListActivity.class);
-                startActivity(list);
-                finish();
             }
         });
     }
@@ -143,6 +136,5 @@ public class AddActivity extends AppCompatActivity {
         imgvw = (ImageView)findViewById(R.id.ivselectimg);
         // btnChoose = (Button)findViewById(R.id.btnselectimg);
         btnAdd = (Button)findViewById(R.id.btnadd);
-        btnList = (Button)findViewById(R.id.btnreturn);
     }
 }

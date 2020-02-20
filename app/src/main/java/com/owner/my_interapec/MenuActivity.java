@@ -31,6 +31,5 @@ public class MenuActivity extends AppCompatActivity {
     public void toPictures(View v) {
         Intent pictures = new Intent(this, RecordListActivity.class);
         startActivity(pictures);
-        finish();
     }
 }

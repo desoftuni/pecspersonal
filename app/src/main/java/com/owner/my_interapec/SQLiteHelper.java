@@ -39,7 +39,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public void updateData(String nombre, String descripcion, byte[] imagen, int id) {
         SQLiteDatabase database = getWritableDatabase();
-        String updateQuery = "UPDATE CARD SET name=?, description=?, image=?, image=? WHERE Id=?";
+        String updateQuery = "UPDATE CARD SET name=?, description=?, image=? WHERE Id=?";
         SQLiteStatement statement = database.compileStatement(updateQuery);
 
         statement.bindString(1, nombre);

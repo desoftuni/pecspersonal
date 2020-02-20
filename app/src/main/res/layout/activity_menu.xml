@@ -20,7 +20,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_topics"
-        android:text="@string/btn_cnfg"
+        android:text="@string/btnReturn"
         android:textSize="28sp"
         android:layout_centerInParent="true"
         android:layout_marginTop="20sp"

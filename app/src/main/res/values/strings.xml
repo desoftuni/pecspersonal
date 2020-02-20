@@ -17,7 +17,7 @@
     <string name="str_carditem">TextView</string>
     <string name="selectTxt">Presiona para seleccionar una imagen</string>
     <string name="add_newimg">Administrar imagenes</string>
-    <string name="btn_cnfg">Configurar</string>
+    <string name="btnReturn">Regresar</string>
     <string name="btnEdit">Actualizar</string>
 
     <!-- Slide 1 titulo y descripcion -->

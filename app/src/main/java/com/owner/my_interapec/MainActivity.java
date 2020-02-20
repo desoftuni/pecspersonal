@@ -3,6 +3,7 @@ package com.owner.my_interapec;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -20,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActionBar actionBar = getSupportActionBar();
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle("Frutas");
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowCustomEnabled(true);
         View cView = getLayoutInflater().inflate(R.layout.custom_action_bar,null);
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(MainActivity.this,"Has clickeado en settings", Toast.LENGTH_SHORT).show();
             Intent addActivity = new Intent(MainActivity.this,MenuActivity.class);
             startActivity(addActivity);
+            finish();
         }
    }
 }
